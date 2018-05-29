@@ -84,6 +84,11 @@ try {
         }
     }
 
+    if (count($nonMutual) === 0) {
+        logM("You are following all loyal people!");
+        exit;
+    }
+
     logM("Here are your non mutual followers:");
     foreach ($nonMutual as $user) {
         if ($user instanceof User) {
