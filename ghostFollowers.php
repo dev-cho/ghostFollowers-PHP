@@ -52,8 +52,8 @@ try {
         }
 
         $followersMaxId = $followersResponse->getNextMaxId();
-        logM("Sleeping for 5 seconds!");
-        sleep(5);
+        logM("[Follower Processing] Sleeping for 3 seconds!");
+        sleep(3);
     } while ($followersMaxId !== null);
 
     $rankTokenFollowing = Signatures::generateUUID();
@@ -67,8 +67,8 @@ try {
         }
 
         $followingsMaxId = $followingResponse->getNextMaxId();
-        logM("Sleeping for 5 seconds!");
-        sleep(5);
+        logM("[Following Processing] Sleeping for 3 seconds!");
+        sleep(3);
     } while ($followingsMaxId !== null);
     logM("Data Collected! Parsing data now!");
 
